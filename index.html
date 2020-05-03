@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./style.css">
+        <script src="script.js"></script>
+        <title>
+           HTML Form
+          
+        </title>
+    </head>
+
+    <body>
+        
+        <div id='get' class="split left">
+            
+            <h2 style="text-align:center">HTML TASK</h2>
+            <label for="fname">First name:</label>
+            <input type="text" id="fname" name="fname" required><br><br>
+            <label for="lname">Last name:</label>
+            <input type="text" id="lname" name="lname"><br><br>
+            <label for="age">Age</label>
+            <input type="text" id="age" name="lname"><br><br>
+            <label for="gender">Gender:</label>
+            <input type="radio" name="gender" value="Male">Male 
+            <input type="radio" name="gender" value="Female">Female 
+            <input type="radio" name="gender" value="Others">Others<br><br>
+            <label for="birthday">Birthday:</label>
+            <input type="date" id="dob" name="birthday"><br><br>
+
+            <label for="Country">Country:</label>
+            
+            <select id='count' data-target="secondList" class=" firstList selectFilter">
+                <option value="-1">Select</option>
+                <option data-ref="one" >India</option>
+                <option data-ref="two" >China</option>
+                <option data-ref="three">USA</option>
+            </select>
+            <br />
+            <br />
+            <label for="State">State:</label>
+            <select data-target="thirdList" class="secondList selectFilter">
+                <option value="-1">Select</option>
+                <option data-ref="A" data-belong="one" >Delhi</option>
+                <option data-ref="B" data-belong="two">Bejing</option>
+                <option data-ref="C" data-belong="three">Dallas</option>
+                <option data-ref="D" data-belong="one">Tamilnadu</option>
+                <option data-ref="E" data-belong="two">Wuhan</option>
+                <option data-ref="F" data-belong="three">Texas</option>
+            </select>
+            <br />
+            <br />
+        
+
+            <input type="submit" value="Submit" class="button" onclick=LoadData()>
+            
+              
+        
+            
+        </div>
+
+          <div id='view' class="split right">
+            
+            <table  id="showData" >
+                <thead>
+                    <tr>
+                        <th>FirstName</th>
+                        <th>LastName</th>
+                        <th>Age</th>
+                        <th>Gender</th>
+                        <th>Date of Birth</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+        <script src="http://code.jquery.com/jquery.min.js"></script>
+        <script src="selectFilter.min.js"></script>
+    </body>
+</html>
